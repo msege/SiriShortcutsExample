@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,77 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SiriShortcutsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TOm-bf-MDt">
+                                <rect key="frame" x="24" y="222.5" width="327" height="222"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjg-tb-5dO">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="66"/>
+                                        <color key="backgroundColor" red="0.091218701896277121" green="0.52926716428492848" blue="0.9833337664604187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <inset key="contentEdgeInsets" minX="24" minY="24" maxX="24" maxY="24"/>
+                                        <state key="normal" title="Glass of Water (0)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="glassOfWaterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8U-Sn-y3E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsw-8c-Vtg">
+                                        <rect key="frame" x="0.0" y="78" width="327" height="66"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="24" minY="24" maxX="24" maxY="24"/>
+                                        <state key="normal" title="Cup of Coffee (0)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cupOfCoffeeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dzw-l3-HDN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LG8-ao-7sX">
+                                        <rect key="frame" x="0.0" y="156" width="327" height="66"/>
+                                        <color key="backgroundColor" red="0.94258779287338257" green="0.42279489016867178" blue="0.59731468522281717" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <inset key="contentEdgeInsets" minX="24" minY="24" maxX="24" maxY="24"/>
+                                        <state key="normal" title="Cup of Tea (0)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cupOfTeaButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqy-Z6-7rx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I just drank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z36-05-zBd">
+                                <rect key="frame" x="124.5" y="140" width="126" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TOm-bf-MDt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bv0-6g-y0T"/>
+                            <constraint firstItem="z36-05-zBd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="G2s-x4-fJT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TOm-bf-MDt" secondAttribute="trailing" constant="24" id="Uod-Ex-UsN"/>
+                            <constraint firstItem="TOm-bf-MDt" firstAttribute="top" secondItem="z36-05-zBd" secondAttribute="bottom" priority="999" constant="50" id="Y7G-uq-DHs"/>
+                            <constraint firstItem="z36-05-zBd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="edH-4u-kjM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TOm-bf-MDt" secondAttribute="bottom" constant="24" id="nyh-ek-940"/>
+                            <constraint firstItem="TOm-bf-MDt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="qbB-ht-NjG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonCoffee" destination="dsw-8c-Vtg" id="End-aW-gdO"/>
+                        <outlet property="buttonTea" destination="LG8-ao-7sX" id="fGV-Zg-D4d"/>
+                        <outlet property="buttonWater" destination="Xjg-tb-5dO" id="cws-Ih-2qG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-257" y="110"/>
         </scene>
     </scenes>
 </document>

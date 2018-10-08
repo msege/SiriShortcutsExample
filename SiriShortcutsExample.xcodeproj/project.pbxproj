@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E1D076C216BB6E900F1C333 /* SiriShortcutsExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriShortcutsExample.entitlements; sourceTree = "<group>"; };
 		5EC2CABF2164146E003B7A1B /* SiriShortcutsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriShortcutsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC2CAC22164146E003B7A1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EC2CAC42164146E003B7A1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		5EC2CAC12164146E003B7A1B /* SiriShortcutsExample */ = {
 			isa = PBXGroup;
 			children = (
+				5E1D076C216BB6E900F1C333 /* SiriShortcutsExample.entitlements */,
 				5EC2CAC22164146E003B7A1B /* AppDelegate.swift */,
 				5EC2CAC42164146E003B7A1B /* ViewController.swift */,
 				5EC2CAC62164146E003B7A1B /* Main.storyboard */,
@@ -96,6 +98,11 @@
 				TargetAttributes = {
 					5EC2CABE2164146E003B7A1B = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -282,15 +289,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SiriShortcutsExample/SiriShortcutsExample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XGQ5E47J4R;
+				DEVELOPMENT_TEAM = 794E354T7N;
 				INFOPLIST_FILE = SiriShortcutsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sinanege.SiriShortcutsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinanege.SiriExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,15 +310,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SiriShortcutsExample/SiriShortcutsExample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XGQ5E47J4R;
+				DEVELOPMENT_TEAM = 794E354T7N;
 				INFOPLIST_FILE = SiriShortcutsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sinanege.SiriShortcutsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinanege.SiriExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
